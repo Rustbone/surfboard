@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&family=Open+Sans:wght@400;600;700;800&display=swap");
+body {
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+.header {
+  margin-right: 20px;
+}
+.header__logo {
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
