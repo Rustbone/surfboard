@@ -1,0 +1,18 @@
+.feature {
+  display: flex;
+
+  &__icon {
+    width: 35px;
+    margin-right: 14px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: $white;
+    max-width: 90px;
+  }
+}
+
+

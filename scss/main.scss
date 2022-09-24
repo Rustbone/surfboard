@@ -1,3 +1,13 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//colors
+$black: #292929;
+$gray: #666666;
+$white: #FFFFFF;
+$yellow: #FEDB3F;
+
+//settings
 @import './settings/normalize.scss';
 @import './vars.scss';
 @import './settings/media.scss';
@@ -7,3 +17,7 @@
 //components
 @import './components/header.scss';
 @import './components/menu.scss';
+@import './components/hero.scss';
+@import './components/features.scss';
+@import './components/feature.scss';
+@import './components/btn.scss';
