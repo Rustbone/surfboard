@@ -3,11 +3,16 @@
   cursor: pointer;
   user-select: none;
 
+  &__visible {
+    margin-right: 10px;
+  }
+
   &--checkbox {
     margin-bottom: 27px;
 
     .radio__visible {
       border-radius: 4px;
+      
 
       &:before {
         background: url("../images/icons/tick.png") center center no-repeat;
