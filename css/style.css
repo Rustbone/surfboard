@@ -389,6 +389,9 @@ img {
   cursor: pointer;
   user-select: none;
 }
+.radio--checkbox {
+  margin-bottom: 27px;
+}
 .radio--checkbox .radio__visible {
   border-radius: 4px;
 }
