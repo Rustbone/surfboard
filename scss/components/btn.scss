@@ -3,7 +3,16 @@
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
+  color: $black;
   padding: 21px 41px;
   border-radius: 100px;
   background: $yellow;
+  border: none;
+
+  &--theme--transparent {
+    background: transparent;
+    color: $white;
+    font-weight: 400;
+    text-transform: none;
+  }
 }

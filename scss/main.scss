@@ -7,6 +7,9 @@ $gray: #666666;
 $white: #FFFFFF;
 $yellow: #FEDB3F;
 
+//z-indexes 
+$z-fixed-menu: 100;
+
 //settings
 @import './settings/normalize.scss';
 @import './vars.scss';
@@ -21,3 +24,13 @@ $yellow: #FEDB3F;
 @import './components/features.scss';
 @import './components/feature.scss';
 @import './components/btn.scss';
+@import './components/section.scss';
+@import './components/headline.scss';
+@import './components/benefits.scss';
+@import './components/benefit.scss';
+@import './components/reviews.scss';
+@import './components/interactive-avatar.scss';
+@import './components/form.scss';
+@import './components/order-section.scss';
+@import './components/radio.scss';
+@import './components/fixed-menu.scss';

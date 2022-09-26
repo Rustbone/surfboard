@@ -1,0 +1,9 @@
+.order-section {
+  background: url('../images/bg/surfer.jpg') center/cover no-repeat;
+  color: $white;
+
+  &__title {
+    color: $white;
+    margin-bottom: 50px;
+  }
+}
