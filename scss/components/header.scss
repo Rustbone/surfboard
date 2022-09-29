@@ -1,9 +1,23 @@
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   color: $white;
   font-weight: 700;
+
+  &__phone-number {
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  display: inline-flex;
+  width: 55px;
+  height: 40px;
+  fill: $white;
+  flex-shrink: 0;
 }
 
 .phone-number {
@@ -12,9 +26,26 @@
   display: flex;
   align-items: center;
 
-  &__icon-elem {
+  &__text {
+    white-space: nowrap;
+  }
+
+  @include tablets {
+    display: none;
+  }
+
+  &__icon {
+    display: inline-flex;
+    fill: $white;
+    flex-shrink: 0;
     width: 13px;
     height: 14px;
     margin-right: 6px;
+
+    &-elem {
+      fill: $black;
+    }
   }
+
+  
 }

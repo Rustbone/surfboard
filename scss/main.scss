@@ -1,6 +1,11 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $black: #292929;
 $gray: #666666;
@@ -20,6 +25,7 @@ $z-fixed-menu: 100;
 //components
 @import './components/header.scss';
 @import './components/menu.scss';
+@import './components/hamburger.scss';
 @import './components/hero.scss';
 @import './components/features.scss';
 @import './components/feature.scss';
@@ -33,4 +39,7 @@ $z-fixed-menu: 100;
 @import './components/form.scss';
 @import './components/order-section.scss';
 @import './components/radio.scss';
+@import './components/social.scss';
+@import './components/footer.scss';
+@import './components/contacts.scss';
 @import './components/fixed-menu.scss';

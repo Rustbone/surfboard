@@ -1,11 +1,11 @@
 .btn {
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
   color: $black;
-  padding: 21px 41px;
-  border-radius: 100px;
+  padding: rem(21px) rem(41px);
+  border-radius: rem(100px);
   background: $yellow;
   border: none;
 

@@ -2,6 +2,11 @@
   text-align: center;
   line-height: 1.2;
 
+  @include phones {
+    display: flex;
+    text-align: left;
+  }
+
   &__img-wrapper {
     display: inline-block;
     width: 128px;
@@ -11,15 +16,17 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
+
+    @include phones {
+      margin-right: 12px;
+    }
   }
 
   &__icon {
     width: 68px;
     height: 68px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(25%, 25%);
   }
 
   &__title {

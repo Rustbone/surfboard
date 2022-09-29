@@ -1,5 +1,12 @@
-body{
+html {
   font-size: $baseFontSize;
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
   font-family: 'Alegreya Sans', sans-serif;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -11,13 +18,13 @@ body{
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: $containerWidth + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: $containerWidth;
+  width: 95%;
+  max-width: $containerWidth;
   margin: 0 auto;
 }
 
