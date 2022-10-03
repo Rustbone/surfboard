@@ -72,6 +72,20 @@ img {
 }
 
 .header {
+  padding-top: 1.5555555556rem;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background: #1968B1;
+    padding: 1.4444444444rem 1.6666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 1.3333333333rem 0.5555555556rem;
+  }
+}
+.header__container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -86,14 +100,14 @@ img {
 
 .logo {
   display: inline-flex;
-  width: 55px;
-  height: 40px;
+  width: 3.0555555556rem;
+  height: 2.2222222222rem;
   fill: #FFFFFF;
   flex-shrink: 0;
 }
 
 .phone-number {
-  font-size: 22px;
+  font-size: 1.2222222222rem;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -110,9 +124,9 @@ img {
   display: inline-flex;
   fill: #FFFFFF;
   flex-shrink: 0;
-  width: 13px;
-  height: 14px;
-  margin-right: 6px;
+  width: 0.7222222222rem;
+  height: 0.7777777778rem;
+  margin-right: 0.3333333333rem;
 }
 .phone-number__icon-elem {
   fill: #292929;
@@ -146,8 +160,8 @@ img {
 }
 
 .hamburger {
-  width: 26px;
-  height: 25px;
+  width: 1.4444444444rem;
+  height: 1.3888888889rem;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,13 +170,14 @@ img {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: inline-flex;
+    align-self: center;
   }
 }
 .hamburger__plank {
   display: block;
   background: #FFFFFF;
-  height: 4px;
-  border-radius: 10px;
+  height: 0.2222222222rem;
+  border-radius: 0.5555555556rem;
 }
 
 .hero {
@@ -230,13 +245,13 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hero__main-title {
-    margin-bottom: 9px;
+    margin-bottom: 0.5rem;
   }
 }
 @media screen and (max-width: 480px) {
   .hero__main-title {
-    font-size: 2.2222222222rem;
-    margin-bottom: 12px;
+    font-size: 1.8888888889rem;
+    margin-bottom: 0.6666666667rem;
   }
 }
 .hero__title-desc {
@@ -248,13 +263,13 @@ img {
 @media screen and (max-width: 768px) {
   .hero__title-desc {
     padding: 0 20%;
-    margin-bottom: 44px;
+    margin-bottom: 2.4444444444rem;
   }
 }
 @media screen and (max-width: 480px) {
   .hero__title-desc {
     padding: 0 5%;
-    margin-bottom: 43px;
+    margin-bottom: 2.3888888889rem;
   }
 }
 .hero__btn {
@@ -690,7 +705,7 @@ img {
 }
 .social__item {
   vertical-align: middle;
-  margin-right: 14px;
+  margin-right: 0.7777777778rem;
 }
 .social__item:last-child {
   margin-right: 0;
@@ -698,13 +713,13 @@ img {
 .social__link {
   display: block;
   text-decoration: none;
-  height: 20px;
-  width: 20px;
+  height: 1.1111111111rem;
+  width: 1.1111111111rem;
   background: center center no-repeat;
 }
 .social__icon {
-  width: 20px;
-  height: 20px;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   fill: #b3b3b3;
 }
 .social__icon:hover {
@@ -716,7 +731,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 18px 0;
+  padding: 1rem 0;
 }
 .footer__container {
   display: flex;
@@ -726,6 +741,11 @@ img {
 @media screen and (max-width: 480px) {
   .footer__container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__phone-number {
+    display: block;
   }
 }
 
@@ -748,6 +768,11 @@ img {
   top: 20%;
   right: 3%;
   z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
 }
 .fixed-menu__item {
   margin-bottom: 0.3888888889rem;

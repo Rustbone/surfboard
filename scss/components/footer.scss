@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 18px 0;
+  padding: rem(18px) 0;
 
   &__container {
     display: flex;
@@ -12,6 +12,12 @@
 
     @include phones {
       flex-direction: column;
+    }
+  }
+
+  &__phone-number {
+    @include tablets {
+      display: block;
     }
   }
 }

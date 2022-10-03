@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Surfboard</title>
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -12,8 +13,8 @@
     <div class="maincontent">
 
       <section class="hero">
-        <div class="container hero__container">
-          <header class="header">
+        <header class="header">
+          <div class="container header__container">
             <a href="" class="logo">
               <svg class="logo__pic">
                 <use href="./images/icons/sprite.svg#logo"></use>
@@ -55,7 +56,9 @@
               <span class="hamburger__plank"></span>
               <span class="hamburger__plank"></span>
             </a>
-          </header>
+          </div>
+        </header>
+        <div class="container hero__container">
           <div class="hero__title-section">
             <h1 class="hero__main-title">Профессиональные доски для серфинга</h1>
             <div class="hero__title-desc">Самый большой выбор серфбордов в мире</div>
@@ -266,7 +269,7 @@
           <div class="container footer__container">
             <address class="contacts">
               <div class="contacts__place">Москва, ул.Новый Арбат, д.31/12</div>
-              <a href="tel:+78009039090" class="phone-number header__phone-number">
+              <a href="tel:+78009039090" class="phone-number footer__phone-number">
                 <svg class="phone-number__icon">
                   <use href="./images/icons/sprite.svg#phone" class="phone-number__icon-elem"></use>
                 </svg>

@@ -1,6 +1,6 @@
 .hamburger {
-  width: 26px;
-  height: 25px;
+  width: rem(26px);
+  height: rem(25px);
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,12 +8,13 @@
 
   @include tablets {
     display: inline-flex;
+    align-self: center;
   }
 
   &__plank {
     display: block;
     background: $white;
-    height: 4px;
-    border-radius: 10px;
+    height: rem(4px);
+    border-radius: rem(10px);
   }
 }

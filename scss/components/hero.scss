@@ -63,12 +63,12 @@
     margin-bottom: rem(17px);
 
     @include tablets {
-      margin-bottom: 9px;
+      margin-bottom: rem(9px);
     }
 
     @include phones {
-      font-size: rem(40px);
-      margin-bottom: 12px;
+      font-size: rem(34px);
+      margin-bottom: rem(12px);
     }
   }
 
@@ -80,12 +80,12 @@
 
     @include tablets {
       padding: 0 20%;
-      margin-bottom: 44px;
+      margin-bottom: rem(44px);
     }
 
     @include phones {
       padding: 0 5%;
-      margin-bottom: 43px;
+      margin-bottom: rem(43px);
     }
   }
 
