@@ -21,7 +21,7 @@ close() {
 }
 
 setEventListener(){
-  this.popup.addEventListener('click', (evt) => {
+  this.menu.addEventListener('click', (evt) => {
     if(evt.target.classList.contains('popup-js') ||  !!evt.target.closest('.button--icon--close') || evt.target.dataset.close === 'true') {
         this.close()
     }
@@ -31,7 +31,7 @@ setEventListener(){
     const targetButtonEvent = e.target.closest('[data-open]');
     if(targetButtonEvent) {
       const currentIdPopup = targetButtonEvent.dataset.open;
-      if(this.popup.full-menu === currentIdPopup){ 
+      if(this.menu.full-menu === currentIdPopup){ 
         this.open();
     }
     }
