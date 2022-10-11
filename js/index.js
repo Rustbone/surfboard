@@ -2,6 +2,7 @@ class Modal {
   constructor(selector, classMod){
     this.menu = document.querySelector(selector);
     this._classMod = classMod;
+    console.log(this.menu)
   }
 
   _handleEscUp = (evt) => {
@@ -22,16 +23,18 @@ close() {
 
 setEventListener(){
   this.menu.addEventListener('click', (evt) => {
-    if(evt.target.classList.contains('popup-js') ||  !!evt.target.closest('.button--icon--close') || evt.target.dataset.close === 'true') {
+    if(evt.target.classList.contains('popup-js') || !!evt.target.closest('.button--icon--close') || evt.target.dataset.close === 'true') {
         this.close()
     }
 })
 
   document.addEventListener('click', (e) => {
+    e.preventDefault()
     const targetButtonEvent = e.target.closest('[data-open]');
+    console.log(targetButtonEvent)
     if(targetButtonEvent) {
       const currentIdPopup = targetButtonEvent.dataset.open;
-      if(this.menu.full-menu === currentIdPopup){ 
+      if(this.menu.id === currentIdPopup){ 
         this.open();
     }
     }
@@ -42,6 +45,6 @@ setEventListener(){
 const menu = new Modal('#full-menu', 'fullscreen-menu--opened')
 menu.setEventListener()
 
-const popupSuccess = new Modal('#popup-success', 'popup--opened')
-popupSuccess.setEventListener()
+// const popupSuccess = new Modal('#popup-success', 'popup--opened')
+// popupSuccess.setEventListener()
 

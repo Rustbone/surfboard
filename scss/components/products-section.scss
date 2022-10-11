@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background: #F8FAF9;
+  position: relative;
 
   &__arrows {
     display: flex;
@@ -16,6 +17,31 @@
     display: inline-block;
     height: 30px;
     width: 16px;
+
+    &--direction--prev, &--direction--next {
+      @include tablets {
+        position: absolute;
+        top: 30%;
+      }
+    }
+
+    @include tablets {
+      &--direction--prev {
+        left: 100px;
+      }
+      &--direction--next {
+        right: 100px;
+      }
+    }
+
+    @include phones {
+      &--direction--prev {
+        left: 0;
+      }
+      &--direction--next {
+        right: 0;
+      }
+    }
   }
 }
 

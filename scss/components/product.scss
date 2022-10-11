@@ -46,7 +46,7 @@
 
   &__col-wrapper {
     display: inline-block;
-    background: url("../images/bg/board-back.png") center center no-repeat;
+    
 
   }
 
@@ -110,12 +110,16 @@
 }
 
 .desc__length {
-  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-right: 52px;
 }
 
 .desc__width {
-  max-width: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .desc__price {
