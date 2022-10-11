@@ -7,6 +7,7 @@
   <title>Surfboard</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/index.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
@@ -51,7 +52,7 @@
               </svg>
               <span class="phone-number__text">8 800 903 90 90</span>
             </a>
-            <a href="" class="hamburger">
+            <a href="" class="hamburger" data-open="full-menu">
               <span class="hamburger__plank"></span>
               <span class="hamburger__plank"></span>
               <span class="hamburger__plank"></span>
@@ -144,6 +145,119 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="section products-section">
+        <div class="container">
+          <div class="products-slider">
+            <div class="products-slider__arrows">
+              <a href="" class="products-slider__arrow products-slider__arrow--direction--prev">
+                <svg class="arrow-prev">
+                  <use href="./images/icons/sprite.svg#arrow-prev"></use>
+                </svg>
+              </a>
+            </div>
+            <ul class="products">
+              <li class="product__item product">
+                <div class="product__container">
+                  <div class="product__col">
+                    <div class="product__col-wrapper">
+                      <img src="./images/content/longboard.png" class="board-img" alt="">                      
+                    </div>                    
+                  </div>
+                  <div class="product__col">
+                    <div class="product__parameters">
+                      <a href="#" class="product__parameters-wrapper">
+                        <svg class="parameters__icon">
+                          <use href="./images/icons/sprite.svg#parameters-icon"></use>
+                        </svg>
+                        <svg class="parameters__icon-word">
+                          <use href="./images/icons/sprite.svg#parameters-word"></use>
+                        </svg>
+                        <div class="product__parameters-dropdown dropdown">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__col">
+                              <ul class="dropdown__icons">
+                                <li class="dropdown__icon">
+                                  <svg width="24" height="15" viewBox="0 0 24 15" class="parameters__icon-svg">
+                                    <use href="./images/icons/sprite.svg#doublearrows"></use>
+                                  </svg> 
+                                </li>
+                                <li class="dropdown__icon">
+                                  <svg width="18" height="18" viewBox="0 0 18 18" class="parameters__icon-svg">
+                                    <use href="./images/icons/sprite.svg#doublearrows-rotate"></use>
+                                  </svg>
+                                </li>
+                                <li class="dropdown__icon">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" class="parameters__icon-svg">
+                                    <use href="./images/icons/sprite.svg#thickness"></use>
+                                  </svg>
+                                </li>
+                                <li class="dropdown__icon">
+                                  <svg width="18" height="24" viewBox="0 0 18 24" class="parameters__icon-svg">
+                                    <use href="./images/icons/sprite.svg#hourglass"></use>
+                                  </svg>
+                                </li>
+                                <li class="dropdown__icon">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" class="parameters__icon-svg">
+                                    <use href="./images/icons/sprite.svg#weight"></use>
+                                  </svg>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="dropdown__col">
+                              <ul class="dropdown__parameters">
+                                <li class="dropdown__parameter">Длина доски</li>
+                                <li class="dropdown__parameter">Ширина доски</li>
+                                <li class="dropdown__parameter">Толщина</li>
+                                <li class="dropdown__parameter">Срок службы</li>
+                                <li class="dropdown__parameter">Вес</li>
+                              </ul>                            
+                            </li>
+                            <li class="dropdown__col">
+                              <ul class="dropdown__values">
+                                <li class="dropdown__value">от 2,5 м</li>
+                                <li class="dropdown__value">от 40 см</li>
+                                <li class="dropdown__value">8 см</li>
+                                <li class="dropdown__value">5 лет</li>
+                                <li class="dropdown__value">7-8 кг</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="product__title">Лонгборд 2.0</div>
+                    <div class="product__desc">
+                      <div class="desc__row">
+                        <p>
+                          Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать.
+                          Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                        </p>
+                      </div>
+                      <div class="desc__row">
+                        <div class="desc__length">Длина доски <b>от 2,5 метров</b></div>
+                        <div class="desc__width">Ширина доски      <b>от 40 сантиметров</b></div>
+                      </div>
+                      <div class="desc__row">
+                        <div class="desc__price">7000 ₽</div>
+                        <div class="desc__order">
+                          <a href="#" class="btn hero__btn">Заказать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="products-slider__arrows">
+              <a href="" class="products-slider__arrow products-slider__arrow--direction--next">
+                <svg class="arrow-next">
+                  <use href="./images/icons/sprite.svg#arrow-next"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section reviews-section">
@@ -342,5 +456,39 @@
       </li>
     </ul>
   </nav>
+  <div class="fullscreen-menu popup-js" id="full-menu">
+    <button class="button button--icon--close fullscreen-menu__close" data-close="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+          <use href="./images/icons/sprite.svg#close">
+      </svg>
+    </button>
+    <nav class="menu menu--colum menu--color--white menu--fz--big">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Серфборды</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Команда</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Меню</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Отзывы</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Как мы работаем</a>
+        </li>
+        <li class="menu__item">
+          <a href="" class="menu__link" data-close="true">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  
 </body>
 </html>

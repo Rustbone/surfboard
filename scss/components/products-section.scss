@@ -1,0 +1,26 @@
+.products-section {
+  background: #F8FAF9;
+}
+
+.products-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAF9;
+
+  &__arrows {
+    display: flex;
+  }
+
+  &__arrow {
+    display: inline-block;
+    height: 30px;
+    width: 16px;
+  }
+}
+
+.arrow-prev, .arrow-next {
+  fill: #F8FAF9;
+  height: 30px;
+  width: 16px;
+}

@@ -1,0 +1,134 @@
+.product {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablets {
+      flex-direction: column;
+
+    }
+  }
+
+  &__col {
+    margin-right: 80px;
+
+    &:last-child {
+      max-width: 368px;
+      margin-right: 0;
+    }
+
+    @include tablets {
+      margin-right: 0;
+
+      &:last-child {
+        max-width: 528px;
+      }
+    }
+  }
+
+  &__title {
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+    }
+  }
+  
+
+  &__col-wrapper {
+    display: inline-block;
+    width: 400px;
+    background: url("../images/bg/board-back.png") center center no-repeat;
+
+  }
+
+  &__parameters {
+    height: 91px;
+    position: relative;
+    margin-bottom: 52px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__parameters-wrapper {
+    position: relative;
+    width: 91px;
+    height: 91px;
+    background: #3A587E;
+    border-radius: 4px;
+    position: absolute;
+    padding: 17px 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover .dropdown {
+      top: 0;
+      left: 91px;
+      opacity: 1;
+    }
+
+    .parameters__icon {
+      width: 38px;
+      height: 38px;
+      fill: $white;
+      margin-bottom: 7px;
+
+      &-word {
+        width: 79px;
+        height: 17px;
+        fill: $white;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $black;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+}
+
+.desc__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.desc__length {
+  max-width: 100px;
+  margin-right: 52px;
+}
+
+.desc__width {
+  max-width: 135px;
+}
+
+.desc__price {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1;
+  color: $black;
+  margin-right: 28px;
+}
+
+.parameters__icon {
+  width: 38px;
+  height: 38px;
+  fill: $white;
+}

@@ -26,4 +26,20 @@
     text-decoration: none;
     white-space: nowrap;
   }
+
+  &--colum {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 2;
+
+    @include tablets {
+      display: flex;
+    }
+
+    .menu__list {
+      
+      flex-direction: column;
+      color: $white;
+    }
+  }
 }
