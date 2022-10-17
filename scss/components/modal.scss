@@ -1,0 +1,27 @@
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #313131;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 309px;
+    height: 176px;
+    background: $white;
+  }
+
+  &__content {
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 39px;
+  }
+}

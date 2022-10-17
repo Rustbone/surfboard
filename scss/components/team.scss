@@ -1,0 +1,94 @@
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    max-width: 220px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:active {
+      .team__title:before {
+        content: url('../images/icons/polygon2.svg');
+      }
+    }
+  }
+
+  &__member {
+    margin-bottom: 21px;
+  }
+
+  &__title {
+    display: inline-flex;
+    color: $black;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 700;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: url('../images/icons/polygon.svg');
+      display: inline-flex;
+      left: 100%;
+      right: 0;
+      top: -2px;
+      margin: 0 5px;
+      
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+
+    &-block {
+      padding-bottom: 5px;
+    }
+
+    &-text {
+      font-weight: 300;
+    }
+  }
+
+  &__occ {
+    color: $black;
+
+    @include tablets {
+      font-weight: 700;
+    }
+  }
+
+  &--version--mobile {
+    display: none;
+  }
+
+  @include tablets {
+    &--version--desktop {
+      display: none;
+    }
+
+    &--version--mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__item {
+      margin-right: 0;
+    }
+  }
+
+  
+}

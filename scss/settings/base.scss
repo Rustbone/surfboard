@@ -75,3 +75,20 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+input, textarea, button {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  resize: none;
+}
+
+input[type="radio"]{
+  -webkit-appearance: radio;
+}

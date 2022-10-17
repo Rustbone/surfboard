@@ -9,6 +9,7 @@
   "author": "Rustem",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "normalize.css": "^8.0.1",
     "sass": "^1.54.9"
   }
