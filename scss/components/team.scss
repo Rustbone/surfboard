@@ -13,11 +13,12 @@
       margin-right: 0;
     }
 
-    &:active {
-      .team__title:before {
-        content: url('../images/icons/polygon2.svg');
-      }
-    }
+    //&:active {
+    //  .team__title:before {
+        //content: url('../images/icons/polygon2.svg');
+        //transform: rotate(180deg)
+     // }
+    //}
   }
 
   &__member {
@@ -44,12 +45,16 @@
       
     }
   }
+  .active .team__title::before {
+    content: url('../images/icons/polygon2.svg');
+   // transform: rotate(180deg)
+  }
 
   &__content {
     position: absolute;
     top: 100%;
     overflow: hidden;
-    transition: height .3s;
+    transition: height .3s ease-out;
     height: 0;
 
     &-block {

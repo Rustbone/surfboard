@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&family=Open+Sans:wght@400;600;700;800&display=swap");
 html {
   font-size: 18px;
@@ -866,6 +865,7 @@ input[type=radio] {
   align-items: center;
   justify-content: center;
   transition: left 0.5s;
+  z-index: 2;
 }
 .fullscreen-menu__close {
   position: absolute;
@@ -901,6 +901,7 @@ input[type=radio] {
 }
 .products-slider__arrows {
   display: flex;
+  z-index: 1;
 }
 .products-slider__arrow {
   display: inline-block;
@@ -1126,9 +1127,6 @@ input[type=radio] {
 .team__item:last-child {
   margin-right: 0;
 }
-.team__item:active .team__title:before {
-  content: url("../images/icons/polygon2.svg");
-}
 .team__member {
   margin-bottom: 21px;
 }
@@ -1150,11 +1148,14 @@ input[type=radio] {
   top: -2px;
   margin: 0 5px;
 }
+.team .active .team__title::before {
+  content: url("../images/icons/polygon2.svg");
+}
 .team__content {
   position: absolute;
   top: 100%;
   overflow: hidden;
-  transition: height 0.3s;
+  transition: height 0.3s ease-out;
   height: 0;
 }
 .team__content-block {

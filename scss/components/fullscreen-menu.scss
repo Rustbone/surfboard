@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   transition: left .5s;
+  z-index: 2;
 
   &__close {
     position: absolute;

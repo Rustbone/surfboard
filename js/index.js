@@ -29,10 +29,11 @@ setEventListener(){
 })
 
   document.addEventListener('click', (e) => {
-    e.preventDefault()
+    
     const targetButtonEvent = e.target.closest('[data-open]');
     
     if(targetButtonEvent) {
+      e.preventDefault()
       const currentIdPopup = targetButtonEvent.dataset.open;
       if(this.menu.id === currentIdPopup){ 
         this.open();
@@ -84,10 +85,12 @@ class Slider {
   setEventListener(){
     const buttonSlideRight = document.querySelector('.products-slider__arrow--direction--next');
     const buttonSlideLeft = document.querySelector('.products-slider__arrow--direction--prev');
-    buttonSlideRight.addEventListener('click',() => {
+    buttonSlideRight.addEventListener('click',(e) => {
+      e.preventDefault();
       this.next()
     })
-    buttonSlideLeft.addEventListener('click',() => {
+    buttonSlideLeft.addEventListener('click',(e) => {
+      e.preventDefault();
       this.prev()
     })
   }
@@ -145,6 +148,7 @@ $('.team__title').click(e => {
   } else {
     closeEveryItem(container);
     openItem($this);
+    
   } 
 })
 
@@ -167,21 +171,161 @@ $(".interactive-avatar__link").click((e) => {
   curItem.addClass("active").siblings().removeClass("active");
 })
 
-// Далее модальное окно на секцию заказа//
-//$(".form").submit(e => {
+
+// Скрипт формы заказа
+
+class AjaxForm{
+  constructor(selector, settings) {
+    this.settings = settings
+    this.form = document.querySelector(selector)
+    this.fields = this.form.elements
+    this.errors = []
+
+    this.form.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      if (this.isValid()) {
+        this.submit()
+      }
+    })
+
+    this.form.addEventListener('input', (e) => this.validationField(e.target.name))
+  }
   
+  isValid() {
+    const validators = this.settings.validators
 
- // $.fancybox.open({
- //   src: '#modal',
- //   type: 'inline'
- //})
-//});
+    if (validators) {
+      for (const fieldName in validators) {
+        this.validationField(fieldName)
+      }
+    }
 
-//$(".app-submit-btn").click(e => {
-  //e.preventDefault();
+    console.log(this.errors)
 
- //$.fancybox.close();
-//})
+    if (!this.errors.length) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  validationField(fieldName) {
+    if (fieldName && this.settings.validators[fieldName]) {
+      try {
+        this.settings.validators[fieldName](this.fields[fieldName])
+        this.hideError(fieldName)
+      } catch (error) {
+        this.showError(fieldName, error.message)
+      }
+
+    }
+  }
+
+  hideError(fieldName) {
+    if (this.errors.length) {
+      const field = this.fields[fieldName].closest ? this.fields[fieldName] : this.fields[fieldName][0]
+      this.errors = this.errors.filter((field) => field !== fieldName)      
+      field.closest('label').classList.add('error')
+    }
+  }
+
+  showError(fieldName, text) {
+    if (fieldName) {
+      const field = this.fields[fieldName].closest ? this.fields[fieldName] : this.fields[fieldName][0]
+      this.errors.push(fieldName)
+      field.closest('label').classList.add('error')
+
+      if (this.settings.placeholder) {
+        field.placeholder = text
+      }
+      
+    }
+  }
+
+  getJSON() {
+    return JSON.stringify(Object.fromEntries(new FormData(this.form)))
+  }
+
+  async submit() {
+    try {
+      var response = await fetch(this.settings.url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: this.getJSON()
+      })
+
+      var body = await response.json()
+   
+      if (response.status >= 400) {
+        throw new Error('Ошибка сервера')
+      }
+
+      this.settings.success(body)
+      this.form.reset()
+    } catch (error) {
+        this.settings.error(error.message)
+    }
+  }  
+}
+
+new AjaxForm('#form', {
+  url: 'https://webdev-api.loftschool.com/sendmail',
+  placeholder: true,
+  validators: {
+    name: function(field) {
+      if (field.value.length < 3) {
+        throw new Error('Имя не валидное')
+      }
+    },
+    phone: function(field) {
+      if (!field.value.length) {
+        throw new Error('Телефон не валиден')
+      }
+    },
+    nal: function(field) {
+      if (!field.checked) {
+        throw new Error('Оплата наличными')
+      }
+    },
+    option: function(field) {
+      if (field.value === 'card') {
+        throw new Error('Оплата картой')
+      }
+    },
+    comment: function(field) {
+      if (!field.value.length) {
+        throw new Error('Комментарий')
+      }
+    }
+  },
+  error:(body) => {
+    alert(body)
+  },  
+  success: (body) => {
+    return body
+    const modal = document.querySelector('#modal')
+  }
+})
+
+
+// Далее модальное окно на секцию заказа//
+$('.form').submit(e => {
+  e.preventDefault();
+
+  $.fancybox.open( {
+    src: '#modal',
+    type: 'inline'
+ })
+});
+
+$(".app-submit-btn").click(e => {
+  e.preventDefault();
+
+ $.fancybox.close();
+})
 
 //const form = document.querySelector('#form');
 //const sendButton = document.querySelector('#sendButton');
@@ -199,47 +343,3 @@ $(".interactive-avatar__link").click((e) => {
 ////    console.log('перезванивать');
 //  }
 //})
-class AjaxForm{
-  constructor(selector, settings) {
-    this.settings = settings
-    this.form = document.querySelector(selector)
-    this.fields = this.form.elements
-    this.errors = []
-
-    this.form.addEventListener('submit', (e) => {
-      e.preventDefault()
-
-      if (this.isValid()) {
-        this.submit()
-      }
-    })
-  }
-  
-  isValid() {
-    const validators = this.settings.validators
-
-    console.log(validators)
-  }
-
-  submit() {
-    console.log('Отправка формы')
-  }  
-}
-
-new AjaxForm('#form', {
-  url: 'https://webdev-api.loftschool.com/sendmail',
-  validators: {
-    name: function(field) {
-      console.log(field)
-    },
-    phone: function(field) {
-      console.log(field)
-    },
-    comment: function(field) {
-      console.log(field)
-    },
-    to: function(field) {
-      console.log(field)
-    },
-  }
-})
