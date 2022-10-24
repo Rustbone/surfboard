@@ -1,3 +1,13 @@
+.team-section {
+  .container {
+    min-height: 495px;
+
+    @include tablets {
+      min-height: 600px;
+    }
+  }
+}
+
 .team {
   display: flex;
   justify-content: space-between;
@@ -51,7 +61,7 @@
   }
 
   &__content {
-    position: absolute;
+    
     top: 100%;
     overflow: hidden;
     transition: height .3s ease-out;

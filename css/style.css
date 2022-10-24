@@ -1128,6 +1128,15 @@ input[type=radio] {
   height: 24px;
 }
 
+.team-section .container {
+  min-height: 495px;
+}
+@media screen and (max-width: 768px) {
+  .team-section .container {
+    min-height: 600px;
+  }
+}
+
 .team {
   display: flex;
   justify-content: space-between;
@@ -1167,7 +1176,6 @@ input[type=radio] {
   content: url("../images/icons/polygon2.svg");
 }
 .team__content {
-  position: absolute;
   top: 100%;
   overflow: hidden;
   transition: height 0.3s ease-out;
@@ -1205,14 +1213,17 @@ input[type=radio] {
   }
 }
 
+.modal {
+  display: none;
+}
 .modal.fancybox-content {
-  background: #313131;
+  width: 310px;
+  height: 176px;
   position: fixed;
   margin: auto;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .modal .fancybox-button {
   display: none;
@@ -1222,9 +1233,6 @@ input[type=radio] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 309px;
-  height: 176px;
-  background: #FFFFFF;
 }
 .modal__content {
   font-weight: 500;
@@ -1303,7 +1311,7 @@ input[type=radio] {
 }
 .products-menu__content-text {
   font-size: 16px;
-  padding: 32px 38px;
+  padding: 32px 20px;
   display: flex;
   align-items: center;
 }

@@ -311,11 +311,15 @@ new AjaxForm('#form', {
     }
   },
   error:(body) => {
-    alert(body)
+    content.text('Ошибка сервера');
+
+    $.fancybox.open( {
+      src: '#modal',
+      type: 'inline'
+   })
   },  
   success: (body) => {
-    return body
-    content.text(body.message);
+    content.text('Сообщение отправлено');
 
     $.fancybox.open( {
       src: '#modal',
@@ -596,11 +600,11 @@ const init = () => {
 ymaps.ready(init);
 
 // Секция YouTube Iframe API
-/*let player;
+let player;
 const playerContainer = $(".player");
 
 let eventsInit = () => {
-  $(".player__start").click(e => {
+  $(".play").click(e => {
     e.preventDefault();
     
   
@@ -612,7 +616,7 @@ let eventsInit = () => {
       player.playVideo();
     }
   });
- };*/
+ };
  
 function onYouTubeIframeAPIReady() {
  player = new YT.Player("yt-player", {
@@ -633,7 +637,7 @@ function onYouTubeIframeAPIReady() {
   }
  });
 } 
-
+/*
 const videoElement = document.querySelector('#yt-player');
 const durationControl = document.querySelector('#durationLevel1');
 const soundControl = document.querySelector('#micLevel1');
@@ -651,4 +655,4 @@ function playStop() {
   } else {
     videoElement.paused()
   }
-}
+}*/

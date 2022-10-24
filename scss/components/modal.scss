@@ -1,15 +1,16 @@
 .modal {
-  
+  display: none;
   
 
   &.fancybox-content {
-    background: #313131;
+    width: 310px;
+    height: 176px;
     position: fixed;
     margin: auto;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
   }
 
   .fancybox-button {
@@ -22,9 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 309px;
-    height: 176px;
-    background: $white;
   }
 
   &__content {
