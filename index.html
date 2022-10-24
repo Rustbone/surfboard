@@ -7,14 +7,18 @@
   
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <!--<link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css">
+  <!--
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+-->
   <title>Surfboard</title>
 </head>
 <body>
   <div class="wrapper">
     <div class="maincontent">
 
-      <section class="hero">
+      <section data-sidemenu-theme="white" data-section-id="hero" class="hero">
         <header class="header">
           <div class="container header__container">
             <a href="#" class="logo">
@@ -25,25 +29,25 @@
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a href="" class="menu__link">О нас</a>
+                  <a href="#" data-scroll-to="benefits" class="menu__link">О нас</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Серфборды</a>
+                  <a href="#" data-scroll-to="products" class="menu__link">Серфборды</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Команда</a>
+                  <a href="#" data-scroll-to="team" class="menu__link">Команда</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Меню</a>
+                  <a href="#" data-scroll-to="products-menu" class="menu__link">Меню</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Отзывы</a>
+                  <a href="#" data-scroll-to="reviews" class="menu__link">Отзывы</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Как мы работаем</a>
+                  <a href="#" data-scroll-to="our-work" class="menu__link">Как мы работаем</a>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Контакты</a>
+                  <a href="#" data-scroll-to="map" class="menu__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -64,7 +68,7 @@
           <div class="hero__title-section">
             <h1 class="hero__main-title">Профессиональные доски для серфинга</h1>
             <div class="hero__title-desc">Самый большой выбор серфбордов в мире</div>
-            <a href="#" class="btn hero__btn">Заказать</a>
+            <a href="#" data-scroll-to="order" class="btn hero__btn">Заказать</a>
           </div>
           <div class="hero__icons-section">
             <ul class="features">
@@ -90,7 +94,7 @@
           </div>                 
         </div>
       </section>
-      <section class="section benefits-section">
+      <section data-sidemenu-theme="black" data-section-id="benefits" class="section benefits-section">
         <div class="container">
           <div class="headline">
             <h2 class="section__title headline__title">Почему Surfboard?</h2>
@@ -148,7 +152,7 @@
           </ul>
         </div>
       </section>
-      <section class="section products-section">
+      <section data-sidemenu-theme="black" data-section-id="products" class="section products-section">
         <div class="container">
           <div class="products-slider">
             <div class="products-slider__arrows">
@@ -244,7 +248,7 @@
                         <div class="desc__row">
                           <div class="desc__price">7000 ₽</div>
                           <div class="desc__order">
-                            <a href="#" class="btn hero__btn">Заказать</a>
+                            <a href="#" data-scroll-to="order" class="btn hero__btn">Заказать</a>
                           </div>
                         </div>
                       </div>
@@ -335,7 +339,7 @@
                         <div class="desc__row">
                           <div class="desc__price">12000 ₽</div>
                           <div class="desc__order">
-                            <a href="#" class="btn hero__btn">Заказать</a>
+                            <a href="#" data-scroll-to="order" class="btn hero__btn">Заказать</a>
                           </div>
                         </div>
                       </div>
@@ -354,7 +358,7 @@
           </div>
         </div>
       </section>
-      <section class="section team-section">
+      <section data-sidemenu-theme="black" data-section-id="team" class="section team-section">
         <div class="container">
           <h2 class="section__title">Команда</h2>
           <ul class="team team--version--desktop">
@@ -459,7 +463,72 @@
           </ul>
         </div>
       </section>
-      <section class="section reviews-section">
+      <section data-sidemenu-theme="white" data-section-id="products-menu" class="section products-menu-section">
+        <h2 class="section__title products-menu-section__title">Меню</h2>
+        <ul class="products-menu">
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title products-menu__bg1">
+              <div class="products-menu__text">Лонгборды</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+                    <use href="./images/icons/sprite.svg#close">
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. 
+                    Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title products-menu__bg2">
+              <div class="products-menu__text">Шортборды</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+                    <use href="./images/icons/sprite.svg#close">
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. 
+                    Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title products-menu__bg3">
+              <div class="products-menu__text">Софттопы</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="button__icon">
+                    <use href="./images/icons/sprite.svg#close">
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. 
+                    Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section data-sidemenu-theme="black" data-section-id="reviews" class="section reviews-section">
         <div class="container">
           <h2 class="section__title">Отзывы</h2>
           <div class="reviews">
@@ -539,7 +608,44 @@
           </div>
         </div>
       </section>
-      <section class="section order-section">
+      <section data-sidemenu-theme="black" data-section-id="our-work" class="section our-work-section">
+        <div class="container">
+          <h2 class="section__title">Как мы работаем</h2>
+          <div class="player-section__container">
+            <div class="player active">
+              <div class="player__wrapper">
+                <video id="yt-player" class="player__elem" poster="../images/content/shortboard-bg.jpeg">
+                  <source href="https://youtu.be/LXb3EKWsInQ" type="video">
+                </video>
+                <button class="play player__video-play-img">
+                  <svg>
+                    <use href="./images/icons/sprite.svg#start-btn-big" alt="start btn"></use>
+                  </svg>
+                </button>                
+              </div>
+              <div class="player__controls">
+                <div class="player__duration">
+                  <button class="player__start play" >
+                    <svg width="12" height="17" viewBox="0 0 12 17">
+                      <use href="./images/icons/sprite.svg#start-btn" alt="start btn"></use>
+                    </svg>
+                  </button>
+                  <input type="range" class="duration__length" id="durationLevel1">                  
+                </div>
+                <div class="player__sound">
+                  <button class="sound__mic" id="mic">
+                    <svg width="14" height="17" viewBox="0 0 14 17">
+                      <use href="./images/icons/sprite.svg#volume-btn" alt="volume btn"></use>
+                    </svg>
+                  </button>
+                  <input type="range" class="duration__length duration__length--other" id="micLevel1">                  
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-sidemenu-theme="white" data-section-id="order" class="section order-section">
         <div class="container">
           <h2 class="section__title order-section__title">Закажите доску</h2>
           <form class="form" id="form">
@@ -606,7 +712,7 @@
                 </label>
               </div>
               <div class="form__btns">
-                <input type="submit" value="Заказать" class="btn">
+                <input data-fancybox type="submit" value="Заказать" class="btn">
                 <input type="reset" value="Очистить" class="btn btn--theme--transparent">
               </div>
               <input type="hidden" name="to" value="rustem.abd@mail.ru">
@@ -614,9 +720,8 @@
           </form>
         </div>
       </section>
-      <section class="section map-section">
-        <div id="map">
-          <img src="./images/bg/map.jpg" alt="">
+      <section data-sidemenu-theme="black" data-section-id="map" class="section map-section">
+        <div id="map" class="map">       
         </div>
         <footer class="footer">
           <div class="container footer__container">
@@ -667,31 +772,31 @@
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--active">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="hero" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="benefits" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="products" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="team" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="products-menu" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="reviews" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="our-work" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="order" class="fixed-menu__link"></a>
       </li>
       <li class="fixed-menu__item">
-        <a href="" class="fixed-menu__link"></a>
+        <a href="" data-scroll-to="map" class="fixed-menu__link"></a>
       </li>
     </ul>
   </nav>
@@ -740,10 +845,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
   integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" 
+  integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js" 
+  integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js" 
+  integrity="sha512-1vJtouuOb2tPm+Jh7EnT2VeiCoWv0d7UQ8SGl/2CoOU+bkxhxSX4gDjmdjmbX4OjbsbCBN+Gytj4RGrjV3BLkQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f88c8789-8ba6-4662-8472-78b5d75aa4f4&lang=ru_RU"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+   <!--<script src="./js/jquery.fancybox.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+-->
   
-  
-  <script src="./js/index.js" defer></script>
+  <script defer src="./js/index.js" defer></script>
 </body>
 </html>

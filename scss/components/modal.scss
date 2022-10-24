@@ -1,13 +1,21 @@
 .modal {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #313131;
+  
+  
+
+  &.fancybox-content {
+    background: #313131;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .fancybox-button {
+    display: none;
+  }
+  
 
   &__container {
     display: flex;
@@ -25,3 +33,4 @@
     margin-bottom: 39px;
   }
 }
+
