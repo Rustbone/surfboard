@@ -1338,36 +1338,20 @@ input[type=radio] {
   display: block;
   width: 100%;
   height: 100%;
-  /* &.paused {
-     .player__start {
-       width: 14px;
-       height: 22px;
-       border: none;
-
-       &:after, &:before {
-         content: "";
-         display: block;
-         position: absolute;
-         width: 5px;
-         top: 0;
-         bottom: 0;
-         background:  #FFFFFF;
-       }
-
-       &:after {
-         right: 0;
-       }
-
-       &:before {
-         left: 0;
-       }
-     }
-   }*/
 }
 .player__wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+.player__poster {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: url(../images/content/shortboard-bg.jpeg) center center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .player__video-play-img {
   position: absolute;
@@ -1394,6 +1378,12 @@ input[type=radio] {
   -webkit-box-align: center;
   -webkit-box-pack: justify;
 }
+.player.paused .start-btn {
+  display: none;
+}
+.player.paused .pause-btn {
+  display: inline;
+}
 .player__start {
   padding: 5px 20px;
   margin-right: 10px;
@@ -1410,6 +1400,10 @@ input[type=radio] {
   align-items: center;
   flex: 1;
   gap: 10px;
+}
+
+.pause-btn {
+  display: none;
 }
 
 #yt-player {

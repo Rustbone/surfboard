@@ -14,7 +14,16 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-  
+  }
+
+  &__poster {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url(../images/content/shortboard-bg.jpeg) center center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__video-play-img {
@@ -45,31 +54,17 @@
     -webkit-box-pack: justify;
   }
 
- /* &.paused {
-    .player__start {
-      width: 14px;
-      height: 22px;
-      border: none;
-
-      &:after, &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 5px;
-        top: 0;
-        bottom: 0;
-        background:  #FFFFFF;
-      }
-
-      &:after {
-        right: 0;
-      }
-
-      &:before {
-        left: 0;
-      }
+  &.paused {
+    .start-btn {
+      display: none;
     }
-  }*/
+    .pause-btn {
+      display: inline;
+    }
+    //.player__poster {
+    //  display: none;
+    //}
+  }
 
   &__start {
     padding: 5px 20px;
@@ -92,10 +87,13 @@
   }  
 }
 
+.pause-btn {
+  display: none;
+}
+
 #yt-player {
   object-fit: cover;
   max-height: 440px;
-  //background: url(../images/content/shortboard-bg.jpeg) center center/cover no-repeat;
 }
 
 .sound__mic {

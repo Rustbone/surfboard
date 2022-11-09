@@ -612,21 +612,24 @@
         <div class="container">
           <h2 class="section__title">Как мы работаем</h2>
           <div class="player-section__container">
-            <div class="player active">
+            <div class="player">
               <div class="player__wrapper">
                 <div id="yt-player" class="player__elem" poster="../images/content/shortboard-bg.jpeg">
                 </div>
-                <button class="play player__video-play-img">
-                  <svg>
-                    <use href="./images/icons/sprite.svg#start-btn-big" alt="start btn"></use>
-                  </svg>
-                </button>                
+                <div class="player__poster">
+                  <button class="play player__video-play-img">
+                    <svg>
+                      <use href="./images/icons/sprite.svg#start-btn-big" alt="start btn"></use>
+                    </svg>
+                  </button>
+                </div>                                
               </div>
               <div class="player__controls">
                 <div class="player__duration">
                   <button class="player__start play" >
                     <svg width="12" height="17" viewBox="0 0 12 17">
-                      <use href="./images/icons/sprite.svg#start-btn" alt="start btn"></use>
+                      <use href="./images/icons/sprite.svg#start-btn" alt="start btn" class="start-btn"></use>
+                      <use href="./images/icons/sprite.svg#pause-btn" alt="start btn" class="pause-btn"></use>
                     </svg>
                   </button>
                   <input type="range" class="duration__length" id="durationLevel1">                  
